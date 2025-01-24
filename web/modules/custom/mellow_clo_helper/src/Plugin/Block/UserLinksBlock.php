@@ -52,11 +52,11 @@ final class UserLinksBlock extends BlockBase implements ContainerFactoryPluginIn
     $build['user_links_block'] = [
       '#theme' => 'mellow_clo_helper_user_links_block_theme',
       '#user_cart' => [
-        'url' => $this->urlGeneratorInterface->generate('mellow_clo_manager.cart.show'),
+        'url' => '/cart',
         'count' => $cartCount ? $cartCount->get('field_cart_products')->count() : 0,
       ],
       '#user_account' => [
-        'url' => $this->urlGeneratorInterface->generate('mellow_clo_manager.account.show'),
+        'url' => '/user',
       ],
     ];
 
