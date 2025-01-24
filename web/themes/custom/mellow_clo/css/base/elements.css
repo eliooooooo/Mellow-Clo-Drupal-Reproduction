@@ -1,3 +1,16 @@
 .container {
   margin: auto;
 }
+
+summary::marker {
+  content: "";
+}
+
+.prose a {
+  text-decoration: underline;
+}
+
+.main-image img {
+  width: 100%;
+  height: auto;
+}
