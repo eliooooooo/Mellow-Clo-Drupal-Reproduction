@@ -35,3 +35,6 @@ web/sites/simpletest
 
 # Ignore PHPstorm files
 .idea
+
+# Ignore theme modules
+web/themes/custom/*/node_modules/

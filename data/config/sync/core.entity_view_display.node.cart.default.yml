@@ -1,0 +1,28 @@
+uuid: d81de145-afd4-4ebf-8d03-ce2683a8abba
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.cart.field_cart_user
+    - node.type.cart
+  module:
+    - user
+id: node.cart.default
+targetEntityType: node
+bundle: cart
+mode: default
+content:
+  field_cart_user:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

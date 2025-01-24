@@ -1,0 +1,17 @@
+uuid: 9a6669f3-3c9b-40e0-b883-bcb667fb408e
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Product
+type: product
+description: null
+help: null
+new_revision: false
+preview_mode: 1
+display_submitted: false

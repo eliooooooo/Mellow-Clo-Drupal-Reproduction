@@ -1,0 +1,23 @@
+uuid: e4576213-1996-4cc0-b21c-ffd2b5b24926
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_product_avaibility
+    - node.type.product
+id: node.product.field_product_avaibility
+field_name: field_product_avaibility
+entity_type: node
+bundle: product
+label: Avaibility
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Avaible
+  off_label: Unavailable
+field_type: boolean

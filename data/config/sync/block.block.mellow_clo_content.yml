@@ -1,0 +1,22 @@
+uuid: 3b352dce-700a-4859-bcc3-9b5bd47dc9a3
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - mellow_clo
+_core:
+  default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
+id: mellow_clo_content
+theme: mellow_clo
+region: content
+weight: -3
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

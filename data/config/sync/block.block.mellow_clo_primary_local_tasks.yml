@@ -1,0 +1,22 @@
+uuid: abfb6d32-0599-4d1b-984c-2ed78de662ac
+langcode: en
+status: true
+dependencies:
+  theme:
+    - mellow_clo
+_core:
+  default_config_hash: nGE3EoPQQaQCuqTUtZgw0-KIzmrqdKDzdNQf2JyPUt4
+id: mellow_clo_primary_local_tasks
+theme: mellow_clo
+region: hero
+weight: -2
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Primary tabs'
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: false
+visibility: {  }

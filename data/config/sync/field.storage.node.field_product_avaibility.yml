@@ -1,0 +1,18 @@
+uuid: efabfcc9-9a56-474e-a67a-0cddd39cf787
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_product_avaibility
+field_name: field_product_avaibility
+entity_type: node
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

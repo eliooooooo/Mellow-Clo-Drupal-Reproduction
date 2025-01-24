@@ -1,0 +1,27 @@
+uuid: 70127c42-58d8-432f-a8dc-f19ec18c1edd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_product_shipping
+    - filter.format.full_html
+    - node.type.product
+  module:
+    - text
+id: node.product.field_product_shipping
+field_name: field_product_shipping
+entity_type: node
+bundle: product
+label: 'Shipping information'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: '<p>We aim to dispatch all orders within 3-5 working days. For all delivery &amp; returns information <a href="https://mellowclo.com/pages/delivery-returns">click here.</a></p>'
+    format: full_html
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

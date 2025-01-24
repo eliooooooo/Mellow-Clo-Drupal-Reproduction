@@ -5,11 +5,3 @@ block.settings.mellow_clo_helper_userlinksblock:
     example:
       type: string
       label: Example
-
-block.settings.mellow_clo_helper_userlinksblock:
-  type: block_settings
-  label: 'UserLinksBlock block'
-  mapping:
-    example:
-      type: string
-      label: Example

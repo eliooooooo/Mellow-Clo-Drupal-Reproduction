@@ -1,0 +1,33 @@
+uuid: 58171910-4035-4e18-be4e-6472b73b3d02
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_product_sizes
+    - node.type.product
+  module:
+    - options
+id: node.product.field_product_sizes
+field_name: field_product_sizes
+entity_type: node
+bundle: product
+label: Size(s)
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: x_small
+  -
+    value: small
+  -
+    value: medium
+  -
+    value: large
+  -
+    value: x_large
+  -
+    value: xx_large
+default_value_callback: ''
+settings: {  }
+field_type: list_string

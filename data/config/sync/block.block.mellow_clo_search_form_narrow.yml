@@ -1,0 +1,23 @@
+uuid: 9dc3dc99-89d5-4a65-99dd-de3f94515d20
+langcode: en
+status: false
+dependencies:
+  module:
+    - search
+  theme:
+    - mellow_clo
+_core:
+  default_config_hash: _nZjxxdypO6xrOAJkCYD81v0L7wh2zbCAVO7_C-UKIc
+id: mellow_clo_search_form_narrow
+theme: mellow_clo
+region: header
+weight: -1
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Search form (narrow)'
+  label_display: '0'
+  provider: search
+  page_id: null
+visibility: {  }

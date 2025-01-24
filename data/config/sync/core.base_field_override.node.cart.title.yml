@@ -1,0 +1,18 @@
+uuid: 36ea09b4-f813-40ea-9a56-b8f4920ffbb3
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.cart
+id: node.cart.title
+field_name: title
+entity_type: node
+bundle: cart
+label: Name
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,20 @@
+uuid: 89b5df7f-3a60-407c-9695-d93f978ba7ac
+langcode: en
+status: true
+dependencies:
+  theme:
+    - mellow_clo
+_core:
+  default_config_hash: Q9_2whdOj1YIomfvsIfopROW4FT_X5pY0DjdOiOaQ5U
+id: mellow_clo_primary_admin_actions
+theme: mellow_clo
+region: hero
+weight: -3
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }
