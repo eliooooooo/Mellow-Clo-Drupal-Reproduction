@@ -38,3 +38,6 @@ web/sites/simpletest
 
 # Ignore theme modules
 web/themes/custom/*/node_modules/
+
+# Ignore database exports
+*.sql.gz

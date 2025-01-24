@@ -1,4 +1,4 @@
-name: drupal
+name: Mellow Clo
 recipe: drupal11
 config:
   webroot: web
