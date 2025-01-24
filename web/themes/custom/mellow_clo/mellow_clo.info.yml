@@ -1,0 +1,15 @@
+name: mellow_clo
+type: theme
+base theme: claro
+description: A flexible theme with a responsive, mobile-first layout.
+package: Custom
+core_version_requirement: ^10 || ^11
+libraries:
+  - mellow_clo/global
+regions:
+  announcement: 'Announcement'
+  header: 'Header'
+  hero: 'Hero'
+  content: 'Content'
+  footer_top: 'Footer Top'
+  footer_bottom: 'Footer Bottom'
