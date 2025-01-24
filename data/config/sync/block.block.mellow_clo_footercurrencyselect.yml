@@ -1,9 +1,9 @@
-uuid: 1573d7e1-a515-445f-93ed-2c006e01a0d9
+uuid: e63f2dee-e1de-4e1f-9333-c4aaf75efd07
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:basic:9c98b9f6-f7f9-4c34-9d77-3c5f4601ecbb'
+    - 'block_content:basic:bddf2d37-e30d-4e94-8890-a507587899af'
   module:
     - block_content
   theme:
@@ -11,11 +11,11 @@ dependencies:
 id: mellow_clo_footercurrencyselect
 theme: mellow_clo
 region: footer_bottom
-weight: -6
+weight: -7
 provider: null
-plugin: 'block_content:9c98b9f6-f7f9-4c34-9d77-3c5f4601ecbb'
+plugin: 'block_content:bddf2d37-e30d-4e94-8890-a507587899af'
 settings:
-  id: 'block_content:9c98b9f6-f7f9-4c34-9d77-3c5f4601ecbb'
+  id: 'block_content:bddf2d37-e30d-4e94-8890-a507587899af'
   label: '[Footer] Currency Select'
   label_display: '0'
   provider: block_content

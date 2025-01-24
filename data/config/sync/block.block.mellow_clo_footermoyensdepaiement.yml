@@ -1,9 +1,9 @@
-uuid: 54cd6857-53a2-4e38-8af1-f8b7683c8715
+uuid: c0066942-dc82-4b13-b99f-f5cdfa82f5a7
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:basic:075377a9-5a15-4010-91ee-fb409c66f31c'
+    - 'block_content:basic:37c4a1f3-20c3-4f6a-8931-e86cf6f84c68'
   module:
     - block_content
   theme:
@@ -11,11 +11,11 @@ dependencies:
 id: mellow_clo_footermoyensdepaiement
 theme: mellow_clo
 region: footer_bottom
-weight: -5
+weight: -6
 provider: null
-plugin: 'block_content:075377a9-5a15-4010-91ee-fb409c66f31c'
+plugin: 'block_content:37c4a1f3-20c3-4f6a-8931-e86cf6f84c68'
 settings:
-  id: 'block_content:075377a9-5a15-4010-91ee-fb409c66f31c'
+  id: 'block_content:37c4a1f3-20c3-4f6a-8931-e86cf6f84c68'
   label: '[Footer] Moyens de paiement'
   label_display: '0'
   provider: block_content

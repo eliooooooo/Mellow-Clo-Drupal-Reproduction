@@ -1,9 +1,9 @@
-uuid: 9d952a11-8e27-43c6-8f44-58ac26ffe16e
+uuid: 0b55b619-b1e4-48f4-9678-d7476ea5008f
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:basic:5a3c2dec-d14e-4995-8f74-1d8fb205b602'
+    - 'block_content:basic:5c71a65c-8ad1-4afc-b6a9-ecdcccee56b3'
   module:
     - block_content
   theme:
@@ -13,9 +13,9 @@ theme: mellow_clo
 region: announcement
 weight: 0
 provider: null
-plugin: 'block_content:5a3c2dec-d14e-4995-8f74-1d8fb205b602'
+plugin: 'block_content:5c71a65c-8ad1-4afc-b6a9-ecdcccee56b3'
 settings:
-  id: 'block_content:5a3c2dec-d14e-4995-8f74-1d8fb205b602'
+  id: 'block_content:5c71a65c-8ad1-4afc-b6a9-ecdcccee56b3'
   label: '[Announcement] Sale code'
   label_display: '0'
   provider: block_content

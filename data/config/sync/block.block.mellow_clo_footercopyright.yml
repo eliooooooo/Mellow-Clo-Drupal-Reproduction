@@ -1,9 +1,9 @@
-uuid: 16c3cb14-e31c-47c2-bc3f-ecff2449be5f
+uuid: 07466687-698d-47e1-bc7c-e12144520f90
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:basic:a1aab0d6-67e4-4aea-8177-ddb152a988bf'
+    - 'block_content:basic:1707cabd-ffde-4120-a16a-053cd4a76a38'
   module:
     - block_content
   theme:
@@ -11,11 +11,11 @@ dependencies:
 id: mellow_clo_footercopyright
 theme: mellow_clo
 region: footer_bottom
-weight: -4
+weight: -5
 provider: null
-plugin: 'block_content:a1aab0d6-67e4-4aea-8177-ddb152a988bf'
+plugin: 'block_content:1707cabd-ffde-4120-a16a-053cd4a76a38'
 settings:
-  id: 'block_content:a1aab0d6-67e4-4aea-8177-ddb152a988bf'
+  id: 'block_content:1707cabd-ffde-4120-a16a-053cd4a76a38'
   label: '[Footer] Copyright'
   label_display: '0'
   provider: block_content
