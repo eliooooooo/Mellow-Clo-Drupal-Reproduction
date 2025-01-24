@@ -1,0 +1,18 @@
+uuid: c8b945cf-c3c7-4033-aeff-b8ae6d300878
+langcode: en
+status: true
+dependencies:
+  theme:
+    - mellow_clo
+id: mellow_clo_
+theme: mellow_clo
+region: header
+weight: 0
+provider: null
+plugin: mellow_clo_helper_user_links
+settings:
+  id: null
+  label: '[Header] User Links Blocks'
+  label_display: '0'
+  provider: null
+visibility: {  }

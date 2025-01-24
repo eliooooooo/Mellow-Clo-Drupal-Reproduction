@@ -1,0 +1,25 @@
+uuid: 16c3cb14-e31c-47c2-bc3f-ecff2449be5f
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:a1aab0d6-67e4-4aea-8177-ddb152a988bf'
+  module:
+    - block_content
+  theme:
+    - mellow_clo
+id: mellow_clo_footercopyright
+theme: mellow_clo
+region: footer_bottom
+weight: -4
+provider: null
+plugin: 'block_content:a1aab0d6-67e4-4aea-8177-ddb152a988bf'
+settings:
+  id: 'block_content:a1aab0d6-67e4-4aea-8177-ddb152a988bf'
+  label: '[Footer] Copyright'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

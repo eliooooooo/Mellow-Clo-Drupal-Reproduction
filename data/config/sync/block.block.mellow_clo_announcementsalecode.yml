@@ -1,0 +1,25 @@
+uuid: 9d952a11-8e27-43c6-8f44-58ac26ffe16e
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:5a3c2dec-d14e-4995-8f74-1d8fb205b602'
+  module:
+    - block_content
+  theme:
+    - mellow_clo
+id: mellow_clo_announcementsalecode
+theme: mellow_clo
+region: announcement
+weight: 0
+provider: null
+plugin: 'block_content:5a3c2dec-d14e-4995-8f74-1d8fb205b602'
+settings:
+  id: 'block_content:5a3c2dec-d14e-4995-8f74-1d8fb205b602'
+  label: '[Announcement] Sale code'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
