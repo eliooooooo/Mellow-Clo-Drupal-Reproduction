@@ -22,13 +22,6 @@ function mellow_clo_preprocess_page(array &$variables): void {
 }
 
 /**
- * Implements hook_preprocess_HOOK() for node.html.twig.
- */
-function mellow_clo_preprocess_node(array &$variables): void {
-
-}
-
-/**
  * Alter page_title hook to add classes to page title.
  */
 function mellow_clo_preprocess_page_title(array &$variables): void {
@@ -38,5 +31,22 @@ function mellow_clo_preprocess_page_title(array &$variables): void {
     }
 
     $variables['title_attributes']['class'][] = 'text-center text-4xl font-bold leading-10 mb-12';
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for node templates.
+ */
+function mellow_clo_preprocess_node(array &$variables) {
+
+  // Add contact form to product node.
+  if ($variables['node']->bundle() == 'product') {
+    $webform_id = 'contact';
+    $webform = \Drupal\webform\Entity\Webform::load($webform_id);
+
+    if ($webform) {
+      $form = \Drupal::entityTypeManager()->getViewBuilder('webform')->view($webform);
+      $variables['contact_form'] = $form;
+    }
   }
 }
