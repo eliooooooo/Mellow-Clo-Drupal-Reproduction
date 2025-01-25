@@ -5,6 +5,7 @@ dependencies:
   config:
     - node.type.article
     - node.type.page
+    - node.type.product
     - taxonomy.vocabulary.tags
   module:
     - comment
@@ -30,13 +31,16 @@ permissions:
   - 'administer url aliases'
   - 'create article content'
   - 'create page content'
+  - 'create product content'
   - 'create terms in tags'
   - 'create url aliases'
+  - 'delete any product content'
   - 'delete article revisions'
   - 'delete own article content'
   - 'delete own files'
   - 'delete own page content'
   - 'delete page revisions'
+  - 'edit any product content'
   - 'edit own article content'
   - 'edit own comments'
   - 'edit own page content'

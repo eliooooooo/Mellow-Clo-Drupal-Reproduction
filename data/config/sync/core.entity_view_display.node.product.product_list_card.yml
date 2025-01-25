@@ -1,0 +1,81 @@
+uuid: bb0d4456-aade-4a1e-80f1-8d8ee05b4210
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.product_list_card
+    - field.field.node.product.field_product_avaibility
+    - field.field.node.product.field_product_description
+    - field.field.node.product.field_product_images
+    - field.field.node.product.field_product_price
+    - field.field.node.product.field_product_shipping
+    - field.field.node.product.field_product_sizes
+    - field.field.node.product.field_vat
+    - node.type.product
+  module:
+    - options
+    - text
+    - user
+id: node.product.product_list_card
+targetEntityType: node
+bundle: product
+mode: product_list_card
+content:
+  field_product_avaibility:
+    type: boolean
+    label: hidden
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_product_description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_product_images:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_product_price:
+    type: number_decimal
+    label: hidden
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_product_shipping:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_product_sizes:
+    type: list_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_vat: true

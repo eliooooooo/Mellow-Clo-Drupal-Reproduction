@@ -1,0 +1,11 @@
+uuid: 413b1070-48e1-45b5-b008-5b63460644cc
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.product_list_card
+label: 'Product List Card'
+description: ''
+targetEntityType: node
+cache: true
