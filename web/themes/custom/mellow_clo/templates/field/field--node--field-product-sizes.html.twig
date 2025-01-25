@@ -55,29 +55,6 @@
 %}
 
 {%
-  set item_classes = [
-    'px-4',
-    'py-2',
-    'border',
-    'border-black/15',
-    'text-lg',
-    'w-fit'
-  ]
-%}
-
-{%
-  set item_oot_classes = [
-    'px-4',
-    'py-2',
-    'border',
-    'border-black/15',
-    'text-lg',
-    'w-fit',
-    'opacity-25',
-  ]
-%}
-
-{%
   set sizes = [
     'X Small',
     'Small',
@@ -87,17 +64,15 @@
     'XX Large',
   ]
 %}
+{% set item_sizes = items|map(item => item.content['#markup']) %}
 
 {% if multiple %}
-  <div{{ attributes.addClass(container_classes) }}>
+  <div{{ attributes.addClass(container_classes) }} x-data="{size: null}" >
     {% for size in sizes %}
-      {%
-        set item = items[loop.index0]
-      %}
-      {% if size in item.content %}
-        <div{{ item.attributes.addClass(item_classes) }}>{{ item.content }}</div>
+      {% if size in item_sizes %}
+        <div class="px-4 py-2 border border-black/15 text-lg w-fit cursor-pointer" :class="{ '!border-black border-2': size == '{{ size }}' }" @click="size = '{{ size }}'">{{ size }}</div>
       {% else %}
-        <div{{ item.attributes.addClass(item_oot_classes) }}>{{ item.content }}</div>
+        <div class="relative px-4 py-2 border border-black/15 text-lg w-fit opacity-25 cursor-not-allowed">{{ size }}</div>
       {% endif %}
     {% endfor %}
   </div>

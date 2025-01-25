@@ -39,13 +39,15 @@
  */
 #}
 
-<div class="flex flex-row gap-5 top-5 sticky" >
+<div class="flex flex-row gap-5 top-5 sticky" x-data="{active: 0}">
   <div class="list-images flex flex-col gap-5 w-20" >
     {% for item in items %}
-      <div{{ attributes }}>{{ item.content }}</div>
+      <div{{ attributes }} class="cursor-pointer" @click="active = {{ loop.index0 }}">{{ item.content }}</div>
     {% endfor %}
   </div>
   <div class="main-image w-full">
-    <div{{ items[0].attributes }}>{{ items[0].content }}</div>
+    {% for item in items %}
+      <div{{ attributes }} x-show="active == {{ loop.index0 }}" x-cloak>{{ item.content }}</div>
+    {% endfor %}
   </div>
 </div>
