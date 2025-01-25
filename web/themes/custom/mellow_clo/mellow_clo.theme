@@ -38,9 +38,8 @@ function mellow_clo_preprocess_page_title(array &$variables): void {
  * Implements hook_preprocess_HOOK() for node templates.
  */
 function mellow_clo_preprocess_node(array &$variables) {
-
-  // Add contact form to product node.
   if ($variables['node']->bundle() == 'product') {
+    // Add contact form to product node.
     $webform_id = 'contact';
     $webform = \Drupal\webform\Entity\Webform::load($webform_id);
 
@@ -48,5 +47,16 @@ function mellow_clo_preprocess_node(array &$variables) {
       $form = \Drupal::entityTypeManager()->getViewBuilder('webform')->view($webform);
       $variables['contact_form'] = $form;
     }
-  }
+
+    // Add "you_may_also_like" view to product node.
+    $view_id = 'you_may_also_like';
+    $display_id = 'block_1';
+    $view = \Drupal\views\Views::getView($view_id);
+
+    if ($view) {
+      $view->setDisplay($display_id);
+      $view->preExecute();
+      $view->execute();
+      $variables['you_may_also_like'] = $view->render();
+    }  }
 }
