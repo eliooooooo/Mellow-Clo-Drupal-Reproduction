@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.product.field_product_price
     - field.field.node.product.field_product_shipping
     - field.field.node.product.field_product_sizes
+    - field.field.node.product.field_product_type
     - field.field.node.product.field_vat
     - node.type.product
   module:
@@ -70,6 +71,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 3
+    region: content
+  field_product_type:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 7
     region: content
   links:
     settings: {  }

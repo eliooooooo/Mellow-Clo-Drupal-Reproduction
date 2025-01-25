@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.product.field_product_price
     - field.field.node.product.field_product_shipping
     - field.field.node.product.field_product_sizes
+    - field.field.node.product.field_product_type
     - field.field.node.product.field_vat
     - node.type.product
   module:
@@ -78,4 +79,5 @@ content:
     weight: 0
     region: content
 hidden:
+  field_product_type: true
   field_vat: true

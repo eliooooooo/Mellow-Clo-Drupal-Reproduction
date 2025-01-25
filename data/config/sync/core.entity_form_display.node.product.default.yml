@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.product.field_product_price
     - field.field.node.product.field_product_shipping
     - field.field.node.product.field_product_sizes
+    - field.field.node.product.field_product_type
     - field.field.node.product.field_vat
     - node.type.product
   module:
@@ -68,6 +69,16 @@ content:
     weight: 124
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_product_type:
+    type: entity_reference_autocomplete
+    weight: 128
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   field_vat:
     type: number

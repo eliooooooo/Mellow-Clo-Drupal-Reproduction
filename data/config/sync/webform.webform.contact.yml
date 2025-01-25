@@ -44,10 +44,10 @@ elements: |-
 css: ''
 javascript: ''
 settings:
-  ajax: false
-  ajax_scroll_top: form
+  ajax: true
+  ajax_scroll_top: ''
   ajax_progress_type: ''
-  ajax_effect: ''
+  ajax_effect: slide
   ajax_speed: null
   page: true
   page_submit_path: ''
