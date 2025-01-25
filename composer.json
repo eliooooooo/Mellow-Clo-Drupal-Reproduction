@@ -23,6 +23,7 @@
         "drupal/gin": "^4.0",
         "drupal/linkit": "^7.0",
         "drupal/pathauto": "^1.13",
+        "drupal/webform": "^6.3@beta",
         "drush/drush": "^13.3"
     },
     "conflict": {
