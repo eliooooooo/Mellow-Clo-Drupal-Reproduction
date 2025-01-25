@@ -27,3 +27,16 @@ function mellow_clo_preprocess_page(array &$variables): void {
 function mellow_clo_preprocess_node(array &$variables): void {
 
 }
+
+/**
+ * Alter page_title hook to add classes to page title.
+ */
+function mellow_clo_preprocess_page_title(array &$variables): void {
+  if (isset($variables['title'])) {
+    if (!isset($variables['title_attributes']['class'])) {
+      $variables['title_attributes']['class'] = [];
+    }
+
+    $variables['title_attributes']['class'][] = 'text-center text-4xl font-bold leading-10 mb-12';
+  }
+}
