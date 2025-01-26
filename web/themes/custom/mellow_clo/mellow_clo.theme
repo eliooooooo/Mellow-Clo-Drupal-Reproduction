@@ -15,10 +15,17 @@ function mellow_clo_preprocess_html(array &$variables): void {
 }
 
 /**
- * Implements hook_preprocess_HOOK() for page.html.twig.
+ * Implements hook_preprocess_HOOK() for page templates.
  */
 function mellow_clo_preprocess_page(array &$variables): void {
+  // Add newsletter form to every node.
+  $webform1_id = 'newsletter';
+  $webform1 = \Drupal\webform\Entity\Webform::load($webform1_id);
 
+  if ($webform1) {
+    $form1 = \Drupal::entityTypeManager()->getViewBuilder('webform')->view($webform1);
+    $variables['page']['footer_top'] = ['newsletter_form' => $form1] + $variables['page']['footer_top'];
+  }
 }
 
 /**
@@ -38,14 +45,15 @@ function mellow_clo_preprocess_page_title(array &$variables): void {
  * Implements hook_preprocess_HOOK() for node templates.
  */
 function mellow_clo_preprocess_node(array &$variables) {
+
   if ($variables['node']->bundle() == 'product') {
     // Add contact form to product node.
-    $webform_id = 'contact';
-    $webform = \Drupal\webform\Entity\Webform::load($webform_id);
+    $webform2_id = 'contact';
+    $webform2 = \Drupal\webform\Entity\Webform::load($webform2_id);
 
-    if ($webform) {
-      $form = \Drupal::entityTypeManager()->getViewBuilder('webform')->view($webform);
-      $variables['contact_form'] = $form;
+    if ($webform2) {
+      $form2 = \Drupal::entityTypeManager()->getViewBuilder('webform')->view($webform2);
+      $variables['contact_form'] = $form2;
     }
 
     // Add "you_may_also_like" view to product node.
@@ -58,5 +66,6 @@ function mellow_clo_preprocess_node(array &$variables) {
       $view->preExecute();
       $view->execute();
       $variables['you_may_also_like'] = $view->render();
-    }  }
+    }
+  }
 }
