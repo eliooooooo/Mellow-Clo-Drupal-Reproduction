@@ -1,22 +1,22 @@
-uuid: 60b21934-9cd8-47f1-a1eb-55b2443a4137
+uuid: cc73f611-b9d7-4f23-bb22-e2ef5cf5b647
 langcode: en
 status: true
 dependencies:
   module:
     - node
-id: products_terms
-label: Products
+id: expeditions
+label: Expeditions
 type: 'canonical_entities:node'
-pattern: '/products/[node:title]'
+pattern: '/expedition/[node:title]'
 selection_criteria:
-  9bcf14b8-712e-49fd-b2a4-35b371743908:
+  478310c0-ee51-4ea9-a09d-97e3f17c7f9e:
     id: 'entity_bundle:node'
     negate: false
-    uuid: 9bcf14b8-712e-49fd-b2a4-35b371743908
+    uuid: 478310c0-ee51-4ea9-a09d-97e3f17c7f9e
     context_mapping:
       node: node
     bundles:
-      product: product
+      expedition: expedition
 selection_logic: and
 weight: -5
 relationships: {  }

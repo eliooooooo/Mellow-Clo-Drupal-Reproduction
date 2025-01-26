@@ -5,9 +5,11 @@ dependencies:
   config:
     - core.entity_view_mode.node.product_list_card
     - field.field.node.product.field_product_avaibility
+    - field.field.node.product.field_product_collection
     - field.field.node.product.field_product_description
     - field.field.node.product.field_product_images
     - field.field.node.product.field_product_price
+    - field.field.node.product.field_product_sale
     - field.field.node.product.field_product_shipping
     - field.field.node.product.field_product_sizes
     - field.field.node.product.field_product_type
@@ -79,5 +81,7 @@ content:
     weight: 0
     region: content
 hidden:
+  field_product_collection: true
+  field_product_sale: true
   field_product_type: true
   field_vat: true

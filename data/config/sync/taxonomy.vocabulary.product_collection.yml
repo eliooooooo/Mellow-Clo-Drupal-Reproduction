@@ -1,0 +1,9 @@
+uuid: aaa77413-6087-434a-b62c-17df1c47dccc
+langcode: en
+status: true
+dependencies: {  }
+name: 'Product collection'
+vid: product_collection
+description: null
+weight: 0
+new_revision: false

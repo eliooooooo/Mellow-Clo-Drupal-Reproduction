@@ -4,9 +4,11 @@ status: true
 dependencies:
   config:
     - field.field.node.product.field_product_avaibility
+    - field.field.node.product.field_product_collection
     - field.field.node.product.field_product_description
     - field.field.node.product.field_product_images
     - field.field.node.product.field_product_price
+    - field.field.node.product.field_product_sale
     - field.field.node.product.field_product_shipping
     - field.field.node.product.field_product_sizes
     - field.field.node.product.field_product_type
@@ -34,6 +36,16 @@ content:
     settings:
       display_label: true
     third_party_settings: {  }
+  field_product_collection:
+    type: entity_reference_autocomplete
+    weight: 129
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   field_product_description:
     type: text_textarea
     weight: 122
@@ -55,6 +67,13 @@ content:
     region: content
     settings:
       placeholder: ''
+    third_party_settings: {  }
+  field_product_sale:
+    type: boolean_checkbox
+    weight: 130
+    region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   field_product_shipping:
     type: text_textarea

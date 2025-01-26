@@ -1,0 +1,18 @@
+uuid: 88829041-9057-4409-9bef-adcac6fe8d7f
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.expedition
+id: node.expedition.title
+field_name: title
+entity_type: node
+bundle: expedition
+label: Name
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
