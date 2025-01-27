@@ -1,8 +1,9 @@
-uuid: 49b65a0a-949a-4d70-9c49-86764b129137
+uuid: c44cc0b7-f684-4f7a-945c-1d92e988ab7f
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.expeditions_card_list
     - field.field.node.expedition.field_expedition_content
     - field.field.node.expedition.field_expedition_date
     - field.field.node.expedition.field_expedition_image
@@ -11,15 +12,16 @@ dependencies:
     - datetime
     - text
     - user
-id: node.expedition.default
+id: node.expedition.expeditions_card_list
 targetEntityType: node
 bundle: expedition
-mode: default
+mode: expeditions_card_list
 content:
   field_expedition_content:
-    type: text_default
+    type: text_summary_or_trimmed
     label: hidden
-    settings: {  }
+    settings:
+      trim_length: 600
     third_party_settings: {  }
     weight: 101
     region: content

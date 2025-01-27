@@ -1,0 +1,11 @@
+uuid: 2ce42f1c-35d1-4e2d-a35e-9e95ca25a54d
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.expeditions_card_list
+label: 'Expeditions card list'
+description: ''
+targetEntityType: node
+cache: true
