@@ -1,0 +1,50 @@
+uuid: 8cf23312-d73a-477a-b26b-7bc532289c44
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.expedition_card_list_compact
+    - field.field.node.expedition.field_expedition_content
+    - field.field.node.expedition.field_expedition_date
+    - field.field.node.expedition.field_expedition_image
+    - node.type.expedition
+  module:
+    - datetime
+    - text
+    - user
+id: node.expedition.expedition_card_list_compact
+targetEntityType: node
+bundle: expedition
+mode: expedition_card_list_compact
+content:
+  field_expedition_content:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_expedition_date:
+    type: datetime_default
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: html_date
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_expedition_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

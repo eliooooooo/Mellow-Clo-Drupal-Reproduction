@@ -1,0 +1,11 @@
+uuid: fa2f2734-1cfe-4fc4-8fc6-0dd958bc734b
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.expedition_card_list_compact
+label: 'Expedition card list compact'
+description: ''
+targetEntityType: node
+cache: true
