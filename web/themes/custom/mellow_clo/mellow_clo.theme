@@ -45,6 +45,11 @@ function mellow_clo_preprocess_page_title(array &$variables): void {
  * Implements hook_preprocess_HOOK() for node templates.
  */
 function mellow_clo_preprocess_node(array &$variables) {
+  if($variables['node']->bundle() == 'expedition') {
+    $nid = $variables['node']->id();
+    $url_object = \Drupal\Core\Url::fromRoute('entity.node.canonical', ['node' => $nid], ['absolute' => TRUE]);
+    $variables['absolute_url'] = $url_object->toString();
+  }
 
   if ($variables['node']->bundle() == 'product') {
     // Add contact form to product node.
