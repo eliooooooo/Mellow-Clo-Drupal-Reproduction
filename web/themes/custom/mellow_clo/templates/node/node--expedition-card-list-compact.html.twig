@@ -60,22 +60,11 @@
  * @ingroup themeable
  */
 #}
-<article {{ attributes }}>
-  <div class="flex flex-row align">
-    <div class="w-full main-image">
-      {{ content.field_expedition_image }}
-    </div>
-    <div class="block-texte p-10 pr-0 w-full flex flex-col gap-5">
-      <div class="flex flex-col gap-2.5">
-        {% set expedition_date = content.field_expedition_date['#markup']|date('M d, Y') %}
-        <p class="text-sm uppercase tracking-wider">{{ expedition_date }}</p>
-        <h2> <a href="{{ url }}" class="text-3xl text-black font-bold" >{{ label.0 }}</a> </h2>
-      </div>
-      <div class="text-lg flex-flex-col gap-5">
-        {{ content.field_expedition_content.0 }}
-      </div>
-      <a href="{{ url }}" class="bg-black text-white font-bold px-5 py-3 leading-6 cursor-pointer w-fit" >Continue reading</a>
-    </div>
+<a href="{{ url }}" {{ attributes }}>
+  <div class="relative w-full main-image pb-5" >
+    {{ content.field_expedition_image }}
   </div>
-
-</article>
+  {% set expedition_date = content.field_expedition_date['#markup']|date('M d, Y') %}
+  <p class="text-sm uppercase tracking-wider pb-1">{{ expedition_date }}</p>
+  <h3 class="text-xl">{{ label.0 }}</h3>
+</a>

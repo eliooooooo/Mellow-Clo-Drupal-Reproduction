@@ -49,6 +49,25 @@ function mellow_clo_preprocess_node(array &$variables) {
     $nid = $variables['node']->id();
     $url_object = \Drupal\Core\Url::fromRoute('entity.node.canonical', ['node' => $nid], ['absolute' => TRUE]);
     $variables['absolute_url'] = $url_object->toString();
+
+    // Add expedition date to the variables.
+    if (isset($variables['content']['field_expedition_date'])) {
+      $date_value = $variables['content']['field_expedition_date']['#items']->value;
+      $date = \Drupal::service('date.formatter')->format(strtotime($date_value), 'custom', 'M d, Y');
+      $variables['expedition_date'] = $date;
+    }
+
+    // Add "you_may_also_like" view to product node.
+    $view_id = 'you_may_also_like';
+    $display_id = 'block_2';
+    $view = \Drupal\views\Views::getView($view_id);
+
+    if ($view) {
+      $view->setDisplay($display_id);
+      $view->preExecute();
+      $view->execute();
+      $variables['you_may_also_like'] = $view->render();
+    }
   }
 
   if ($variables['node']->bundle() == 'product') {
@@ -71,6 +90,23 @@ function mellow_clo_preprocess_node(array &$variables) {
       $view->preExecute();
       $view->execute();
       $variables['you_may_also_like'] = $view->render();
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for field templates.
+ */
+function mellow_clo_preprocess_field(array &$variables) {
+  if ($variables['element']['#field_name'] == 'title' && $variables['element']['#bundle'] == 'expedition') {
+    // Check if we are on a full node page.
+    if ($variables['element']['#view_mode'] == 'full') {
+      // Add expedition date to the field variables.
+      if (isset($variables['element']['#object']->field_expedition_date)) {
+        $date_value = $variables['element']['#object']->field_expedition_date->value;
+        $date = \Drupal::service('date.formatter')->format(strtotime($date_value), 'custom', 'd M, Y');
+        $variables['expedition_date'] = $date;
+      }
     }
   }
 }
