@@ -26,3 +26,7 @@ summary::marker {
   width: 100%;
   height: auto;
 }
+
+.expeditions .views-row:nth-child(2n) .align {
+  flex-direction: row-reverse;
+}
