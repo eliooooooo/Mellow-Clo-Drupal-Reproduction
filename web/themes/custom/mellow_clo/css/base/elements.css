@@ -30,3 +30,8 @@ summary::marker {
 .expeditions .views-row:nth-child(2n) .align {
   flex-direction: row-reverse;
 }
+
+.expeditions .views-row:nth-child(2n) .align .block-texte {
+  padding-right: 40px;
+  padding-left: 0;
+}
