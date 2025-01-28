@@ -11,7 +11,13 @@ function mellow_clo_helper_theme(): array {
         'user_cart' => NULL,
         'user_account' => NULL,
       ],
-    ]
+    ],
+    'mellow_clo_homepage_sliderblock' => [
+      'variables' => [
+        'slides' => NULL,
+      ],
+    ],
   ];
 }
+
 
