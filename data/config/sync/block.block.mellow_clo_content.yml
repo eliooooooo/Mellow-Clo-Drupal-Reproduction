@@ -11,7 +11,7 @@ _core:
 id: mellow_clo_content
 theme: mellow_clo
 region: content
-weight: -3
+weight: -6
 provider: null
 plugin: system_main_block
 settings:

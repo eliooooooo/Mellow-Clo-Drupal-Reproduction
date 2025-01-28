@@ -1,0 +1,30 @@
+uuid: 6229eb24-50dc-48b5-ac40-193da72c59a0
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:60b4c006-848b-4bd2-8b64-6541e3fa68a1'
+  module:
+    - block_content
+    - system
+  theme:
+    - mellow_clo
+id: mellow_clo_homeinspiredbyallthingsoutdoors
+theme: mellow_clo
+region: content
+weight: -7
+provider: null
+plugin: 'block_content:60b4c006-848b-4bd2-8b64-6541e3fa68a1'
+settings:
+  id: 'block_content:60b4c006-848b-4bd2-8b64-6541e3fa68a1'
+  label: '[Home] Inspired By All Things Outdoors'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

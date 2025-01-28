@@ -1,0 +1,30 @@
+uuid: 2f9bd68e-fb0e-40d0-85cc-0446ec21c6c5
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:6c3737e2-c9e9-4cd0-8f7a-f83647516e62'
+  module:
+    - block_content
+    - system
+  theme:
+    - mellow_clo
+id: mellow_clo_homejoinourteam
+theme: mellow_clo
+region: content
+weight: -8
+provider: null
+plugin: 'block_content:6c3737e2-c9e9-4cd0-8f7a-f83647516e62'
+settings:
+  id: 'block_content:6c3737e2-c9e9-4cd0-8f7a-f83647516e62'
+  label: '[Home] Join our team'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'
