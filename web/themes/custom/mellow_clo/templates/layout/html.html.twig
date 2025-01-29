@@ -50,7 +50,9 @@
 
     <js-placeholder token="{{ placeholder_token }}">
   </head>
-  <body{{ attributes.addClass(body_classes) }}>
+  <body{{ attributes.addClass(body_classes) }} x-data="{ scrolled : false }"
+    @scroll.window="scrolled = (window.pageYOffset > 300)"
+  >
     {#
       Keyboard navigation/accessibility link to main content section in
       page.html.twig.

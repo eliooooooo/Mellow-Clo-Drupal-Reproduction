@@ -46,15 +46,14 @@
  */
 #}
 <!-- header -->
-<header>
-
+<header class="z-30 top-0" :class="scrolled ? 'sticky bg-white border-b border-black/15' : '{% if is_front %} absolute w-full h-auto left-0 {% endif %}'" x-transition>
     {% if page.announcement %}
-    <div class="bg-black px-5 py-2 text-base" >
+    <div class="bg-black px-5 py-2 text-base" :class="scrolled ? 'hidden' : 'block'">
         {{ page.announcement }}
     </div>
     {% endif %}
 
-    <div class="py-5 border-b border-black/15" >
+    <div class="py-5 " :class="scrolled ? 'border-b border-black/15' : 'border-0 text-white' ">
         {{ page.header }}
     </div>
 </header>
@@ -65,9 +64,9 @@
 </div>
 
 {% if page.hero %}
-<div>
-  {{ page.hero }}
-</div>
+    <div>
+      {{ page.hero }}
+    </div>
 {% endif %}
 
 <!-- main -->
