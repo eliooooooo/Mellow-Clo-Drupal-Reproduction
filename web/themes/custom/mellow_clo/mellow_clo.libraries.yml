@@ -2,6 +2,7 @@
 global:
   js:
     js/mellow-clo.js: {}
+    js/swiper.js: { attributes: { type: module } }
     //cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js: { type: external, minified: true }
     # //unpkg.com/@tailwindcss/browser@4: { type: external, minified: true } (trop lent au chargement de la page)
   css:
@@ -24,3 +25,4 @@ global:
       css/layout/layout.css: {}
     theme:
       css/theme/print.css: { media: print }
+      //cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css: { type: external, minified: true }
