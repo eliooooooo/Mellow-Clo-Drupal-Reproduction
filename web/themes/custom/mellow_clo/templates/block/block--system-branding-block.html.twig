@@ -18,7 +18,7 @@
 {% block content %}
   {% if site_logo %}
     <a href="{{ path('<front>') }}" rel="home">
-      <img :src="scrolled ? '{{ site_logo }}' : '/sites/default/files/2025-01/logo_white.png'" alt="{{ 'Home'|t }}" fetchpriority="high" />
+      <img :src="scrolled ? '{{ site_logo }}' : '{% if is_front %}/sites/default/files/2025-01/logo_white.png{% else %}{{ site_logo }}{% endif %}'" alt="{{ 'Home'|t }}" fetchpriority="high" />
     </a>
   {% endif %}
   {% if site_name %}
