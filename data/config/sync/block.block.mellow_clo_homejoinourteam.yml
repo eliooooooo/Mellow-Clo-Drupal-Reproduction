@@ -12,7 +12,7 @@ dependencies:
 id: mellow_clo_homejoinourteam
 theme: mellow_clo
 region: content
-weight: -8
+weight: -9
 provider: null
 plugin: 'block_content:6c3737e2-c9e9-4cd0-8f7a-f83647516e62'
 settings:

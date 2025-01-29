@@ -1,0 +1,29 @@
+uuid: 34cf4d84-9712-4210-80d8-e864306e7273
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_slider_hero_image
+    - media.type.image
+    - node.type.slider_hero
+id: node.slider_hero.field_slider_hero_image
+field_name: field_slider_hero_image
+entity_type: node
+bundle: slider_hero
+label: Image
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

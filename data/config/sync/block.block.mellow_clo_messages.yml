@@ -11,7 +11,7 @@ _core:
 id: mellow_clo_messages
 theme: mellow_clo
 region: hero
-weight: -4
+weight: -8
 provider: null
 plugin: system_messages_block
 settings:

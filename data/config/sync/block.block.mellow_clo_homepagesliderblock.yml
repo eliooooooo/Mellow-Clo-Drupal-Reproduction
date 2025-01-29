@@ -1,0 +1,25 @@
+uuid: 4496aaa6-bff8-4ee5-a122-b6dcf8c1dea5
+langcode: en
+status: true
+dependencies:
+  module:
+    - mellow_clo_helper
+    - system
+  theme:
+    - mellow_clo
+id: mellow_clo_homepagesliderblock
+theme: mellow_clo
+region: hero
+weight: -9
+provider: null
+plugin: mellow_clo_helper_home_page_slider_block
+settings:
+  id: mellow_clo_helper_home_page_slider_block
+  label: '[Hero] Home Page slider block'
+  label_display: '0'
+  provider: mellow_clo_helper
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

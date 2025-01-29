@@ -9,7 +9,7 @@ _core:
 id: mellow_clo_secondary_local_tasks
 theme: mellow_clo
 region: hero
-weight: -1
+weight: -5
 provider: null
 plugin: local_tasks_block
 settings:
