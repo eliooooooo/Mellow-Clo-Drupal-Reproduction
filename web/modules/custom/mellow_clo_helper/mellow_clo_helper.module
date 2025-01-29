@@ -17,6 +17,11 @@ function mellow_clo_helper_theme(): array {
         'slides' => NULL,
       ],
     ],
+    'mellow_clo_homepage_page_sliderblock' => [
+      'variables' => [
+        'slides' => NULL,
+      ],
+    ],
   ];
 }
 

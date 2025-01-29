@@ -15,3 +15,18 @@ const swiper = new Swiper('.swiper', {
     prevEl: '.swiper-button-prev',
   },
 });
+
+const swiper1 = new Swiper('.swiper1', {
+  // Optional parameters
+  effect: 'fade',
+  loop: true,
+  autoplay: {
+    delay: 2500,
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
