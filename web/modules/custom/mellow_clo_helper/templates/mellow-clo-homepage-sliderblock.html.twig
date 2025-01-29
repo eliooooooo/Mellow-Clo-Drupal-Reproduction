@@ -1,13 +1,28 @@
-<div class="swiper">
-  <div class="swiper-wrapper">
+<div class="swiper !overflow-visible">
+  <div class="swiper-wrapper overflow-hidden">
     {% for slide in slides %}
       <a href="{{ slide.link }}" class="swiper-slide h-full">
-        <div class="bg-black/25 absolute w-full h-full left-0 top-0"></div>
+        <div class="bg-black/35 absolute w-full h-full left-0 top-0 z-20"></div>
         <img src="{{ slide.image }}" alt="{{ slide.title }}" class="absolute left-0 top-1/2 -translate-y-1/2"/>
+        <div class="container relative flex flex-col gap-2 h-full justify-end items-left z-30 !pb-16" >
+          <h2 class="text-white text-7xl font-bold">{{ slide.title }}</h2>
+          <button class="w-fit text-white border-2 border-white px-5 py-3 uppercase font-bold">Shop here</button>
+        </div>
       </a>
     {% endfor %}
   </div>
 
-  <div class="swiper-button-prev"></div>
-  <div class="swiper-button-next"></div>
+  <div class="flex flex-row gap-10 justify-between items-center absolute right-10 top-full z-30">
+    <div class="swiper-button-prev !relative after:!content-[''] !text-black !bg-white !shadow-md !w-10 !h-10 !rounded-full">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left !h-auto !w-auto" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"/>
+      </svg>
+    </div>
+    <div class="swiper-button-next !relative after:!content-[''] !text-black !bg-white !shadow-md !w-10 !h-10 !rounded-full">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right !h-auto !w-auto" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+      </svg>
+    </div>
+  </div>
+
 </div>
