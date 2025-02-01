@@ -32,11 +32,13 @@ const swiper1 = new Swiper('.swiper1', {
 });
 
 const swiper2 = new Swiper('.swiper2', {
-  // Optional parameters
-  effect: 'fade',
-  loop: true,
-  autoplay: {
-    delay: 1000,
+  slidesPerView: 2,
+  spaceBetween: 30,
+
+  breakpoints: {
+    768: {
+      slidesPerView: 4,
+    },
   },
 
   // Navigation arrows

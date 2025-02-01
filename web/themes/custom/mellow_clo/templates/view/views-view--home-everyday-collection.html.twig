@@ -35,7 +35,7 @@
 {%
   set classes = [
     dom_id ? 'js-view-dom-id-' ~ dom_id,
-    'container'
+    'container',
   ]
 %}
 <div{{ attributes.addClass(classes) }}>
@@ -49,8 +49,28 @@
   {{ attachment_before }}
 
   {% if rows -%}
-    <div class="grid grid-cols-2 sm:grid-cols-4 gap-8">
-      {{ rows }}
+    <p class="uppercase tracking-widest text-center mb-1" >YOUR NEW DAILY ESSENTIALS</p>
+    <a href="/everyday-collection" class="underline font-bold text-3xl text-center"><h2>The Everyday Collection</h2></a>
+
+    <div class="swiper2 relative mb-10 mt-16">
+      <div class="swiper-wrapper">
+        {{ rows }}
+      </div>
+
+      <div class="swiper-button-prev !left-0 md:!-left-5 after:!content-[''] !text-white !bg-black !w-10 !h-10 !rounded-full">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left !h-auto !w-auto" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"/>
+        </svg>
+      </div>
+      <div class="swiper-button-next !right-0 md:!-right-5 after:!content-[''] !text-white !bg-black !w-10 !h-10 !rounded-full">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right !h-auto !w-auto" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+        </svg>
+      </div>
+
+    </div>
+    <div class="flex justify-center">
+      <a href="/everyday-collection" class="text-center px-5 py-3 mx-auto text-white bg-black text-base font-bold mb-20">View all</a>
     </div>
 
   {% elseif empty -%}
