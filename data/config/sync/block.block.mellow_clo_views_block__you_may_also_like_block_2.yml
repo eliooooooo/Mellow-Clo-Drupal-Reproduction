@@ -17,7 +17,7 @@ third_party_settings:
 id: mellow_clo_views_block__you_may_also_like_block_2
 theme: mellow_clo
 region: content
-weight: -5
+weight: -4
 provider: null
 plugin: 'views_block:you_may_also_like-block_2'
 settings:

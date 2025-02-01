@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   module:
-    - block_classes
     - mellow_clo_helper
     - system
   theme:
@@ -11,7 +10,7 @@ dependencies:
 id: mellow_clo_homepagepagesliderblock
 theme: mellow_clo
 region: content
-weight: -6
+weight: -5
 provider: null
 plugin: homepage_page_sliderblock
 settings:
