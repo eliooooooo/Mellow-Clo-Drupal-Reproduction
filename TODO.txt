@@ -1,5 +1,4 @@
 - [] Filters
-- [] Responsive sliders
 - [] Menu responsive
 - [] Tailles d'images perso
 - [] Credentials block

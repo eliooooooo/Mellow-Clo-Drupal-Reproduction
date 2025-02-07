@@ -62,11 +62,11 @@
 #}
 <div{{ attributes.addClass('container') }}>
 
-  <div class="grid grid-cols-12 gap-6 pb-16" >
-    <div class="col-span-6" >
+  <div class="grid md:grid-cols-12 gap-6 pb-4 md:pb-16" >
+    <div class="md:col-span-6" >
       {{ content.field_product_images }}
     </div>
-    <div class="col-span-6 pl-10" >
+    <div class="md:col-span-6 pl-10" >
       <div class="data-content" >
         <h1 class="text-4xl font-bold leading-10 mb-2.5 block">{{ label }}</h1>
         <div class="mb-6" >
@@ -134,7 +134,7 @@
     </div>
   </div>
 
-  <div class="mt-26" >
+  <div class="mt-6 md:mt-26" >
   <h2 class="text-3xl font-bold leading-10 block text-center mb-12">You may also like</h2>
     {{ you_may_also_like }}
   </div>

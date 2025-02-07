@@ -3,7 +3,7 @@
     {% for slide in slides %}
       <a href="{{ slide.link }}" class="swiper-slide h-full">
         <div class="bg-black/35 absolute w-full h-full left-0 top-0 z-20"></div>
-        <img src="{{ slide.image }}" alt="{{ slide.title }}" class="absolute left-0 top-1/2 -translate-y-1/2"/>
+        <img src="{{ slide.image }}" alt="{{ slide.title }}" class="absolute h-full w-full object-cover left-0 top-1/2 -translate-y-1/2"/>
         <div class="container relative flex flex-col gap-2 h-full justify-end items-left z-30 !pb-16" >
           <h2 class="text-white text-7xl font-bold">{{ slide.title }}</h2>
           <button class="w-fit text-white border-2 border-white px-5 py-3 uppercase font-bold">Shop here</button>
