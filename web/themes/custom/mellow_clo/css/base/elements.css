@@ -43,3 +43,7 @@ summary::marker {
 .swiper1 {
   height: 650px;
 }
+
+[x-cloak] {
+  display: none;
+}

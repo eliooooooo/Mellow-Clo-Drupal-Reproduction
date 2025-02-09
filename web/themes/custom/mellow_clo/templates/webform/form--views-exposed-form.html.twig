@@ -1,0 +1,35 @@
+{#
+/**
+ * @file
+ * Default theme implementation for a 'form' element.
+ *
+ * Available variables
+ * - attributes: A list of HTML attributes for the wrapper element.
+ * - children: The child elements of the form.
+ *
+ * @see template_preprocess_form()
+ *
+ * @ingroup themeable
+ */
+#}
+<div x-data="{ openFilters: false }">
+  <div class="border border-black/15 py-2 px-4 text-lg cursor-pointer flex flex-row gap-3 items-center justify-center w-fit mb-2" @click="console.log('clicked'); openFilters = !openFilters">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-sliders2" viewBox="0 0 16 16">
+      <path fill-rule="evenodd" d="M10.5 1a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4H1.5a.5.5 0 0 1 0-1H10V1.5a.5.5 0 0 1 .5-.5M12 3.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5m-6.5 2A.5.5 0 0 1 6 6v1.5h8.5a.5.5 0 0 1 0 1H6V10a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5M1 8a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2A.5.5 0 0 1 1 8m9.5 2a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V13H1.5a.5.5 0 0 1 0-1H10v-1.5a.5.5 0 0 1 .5-.5m1.5 2.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5"/>
+    </svg>
+    <span>Filter</span>
+  </div>
+  <div class="fixed top-0 left-0 w-screen h-screen z-30 bg-black/50" x-show="openFilters" x-cloak>
+    <div class="fixed top-0 left-0 w-auto h-full bg-white p-10 pt-20 z-100" :class="{ 'block': openFilters, 'hidden': !openFilters }" @click.away="openFilters = false">
+      <div class="flex flex-row justify-between items-center pb-6 border-b border-gray-300">
+        <span class="text-2xl font-bold">Filter</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16" @click="openFilters = false">
+          <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+        </svg>
+      </div>
+      <form{{ attributes.addClass('pt-6') }}>
+        {{ children }}
+      </form>
+    </div>
+  </div>
+</div>
