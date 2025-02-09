@@ -1,0 +1,21 @@
+uuid: 5a040aa6-ab85-44f6-ba54-d43180f8dcd3
+langcode: en
+status: true
+dependencies: {  }
+name: custom_vignettes
+label: 'custom vignettes'
+effects:
+  013794c0-6635-4c9f-aa56-1c7065e097c0:
+    uuid: 013794c0-6635-4c9f-aa56-1c7065e097c0
+    id: image_convert
+    weight: 1
+    data:
+      extension: webp
+  52bc58a1-4594-4655-a9a4-c069defc874c:
+    uuid: 52bc58a1-4594-4655-a9a4-c069defc874c
+    id: image_scale
+    weight: 2
+    data:
+      width: 300
+      height: 400
+      upscale: false

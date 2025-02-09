@@ -1,4 +1,3 @@
-- [] Tailles d'images perso
 - [] Credentials block
 - [] Webform submissions
 - [] Webform contact name + email not showing

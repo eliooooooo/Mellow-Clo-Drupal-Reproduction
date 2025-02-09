@@ -40,9 +40,21 @@ elements: |-
         - border-white/15
         - text-white
         - 'placeholder:text-white'
+        - border-black/15
+        - w-full
+        - px-2.5
+        - py-2
+        - 'focus:border-black'
   actions:
     '#type': webform_actions
     '#title': 'Submit button(s)'
+    '#attributes':
+      class:
+        - bg-black
+        - text-white
+        - px-5
+        - py-3
+        - cursor-pointer
     '#submit_hide': true
 css: ''
 javascript: ''
@@ -56,7 +68,7 @@ settings:
   page_submit_path: ''
   page_confirm_path: ''
   page_theme_name: ''
-  form_title: both
+  form_title: source_entity_webform
   form_submit_once: false
   form_open_message: ''
   form_close_message: ''
@@ -85,7 +97,11 @@ settings:
   form_access_denied_message: ''
   form_access_denied_attributes: {  }
   form_file_limit: ''
-  form_attributes: {  }
+  form_attributes:
+    class:
+      - flex
+      - flex-col
+      - gap-5
   form_method: ''
   form_action: ''
   share: false

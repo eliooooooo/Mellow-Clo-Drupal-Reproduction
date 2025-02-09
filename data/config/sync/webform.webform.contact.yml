@@ -18,24 +18,58 @@ title: 'Ask a question'
 description: '<p>Basic email contact webform.</p>'
 categories: {  }
 elements: |-
-  name:
-    '#title': Name
-    '#type': textfield
-    '#required': true
-    '#default_value': '[current-user:display-name]'
-  email:
-    '#title': Email
-    '#type': email
-    '#required': true
-    '#default_value': '[current-user:mail]'
+  container:
+    '#type': container
+    '#attributes':
+      class:
+        - flex
+        - flex-row
+        - gap-2.5
+        - w-full
+        - mb-6
+    name:
+      '#type': textfield
+      '#title': Name
+      '#required': true
+      '#default_value': '[current-user:display-name]'
+      '#attributes':
+        class:
+          - w-1/2
+          - border
+          - border-black/15
+          - w-full
+          - px-2.5
+          - py-2
+          - 'focus:border-black'
+    email:
+      '#type': email
+      '#title': Email
+      '#required': true
+      '#default_value': '[current-user:mail]'
+      '#attributes':
+        class:
+          - w-1/2
+          - border
+          - border-black/15
+          - w-full
+          - px-2.5
+          - py-2
+          - 'focus:border-black'
   message:
-    '#title': Message
     '#type': textarea
+    '#title': Message
     '#required': true
+    '#attributes':
+      class:
+        - mb-6
     '#test': 'Please ignore this email.'
   actions:
     '#type': webform_actions
     '#title': 'Submit button(s)'
+    '#attributes':
+      class:
+        - mb-6
+        - w-fit
     '#submit__label': Send
   conditions:
     '#type': webform_message
@@ -44,10 +78,10 @@ elements: |-
 css: ''
 javascript: ''
 settings:
-  ajax: true
+  ajax: false
   ajax_scroll_top: ''
   ajax_progress_type: ''
-  ajax_effect: slide
+  ajax_effect: ''
   ajax_speed: null
   page: true
   page_submit_path: ''
@@ -93,13 +127,18 @@ settings:
   submission_label: ''
   submission_exception_message: ''
   submission_locked_message: ''
-  submission_log: false
+  submission_log: true
   submission_excluded_elements: {  }
   submission_exclude_empty: false
   submission_exclude_empty_checkbox: false
   submission_views: {  }
   submission_views_replace: {  }
-  submission_user_columns: {  }
+  submission_user_columns:
+    - serial
+    - created
+    - element__name
+    - element__email
+    - element__message
   submission_user_duplicate: false
   submission_access_denied: default
   submission_access_denied_title: ''
@@ -185,43 +224,61 @@ access:
     users: {  }
     permissions: {  }
   view_any:
-    roles: {  }
+    roles:
+      - content_editor
+      - administrator
     users: {  }
     permissions: {  }
   update_any:
-    roles: {  }
+    roles:
+      - administrator
     users: {  }
     permissions: {  }
   delete_any:
-    roles: {  }
+    roles:
+      - content_editor
+      - administrator
     users: {  }
     permissions: {  }
   purge_any:
-    roles: {  }
+    roles:
+      - content_editor
+      - administrator
     users: {  }
     permissions: {  }
   view_own:
-    roles: {  }
+    roles:
+      - content_editor
+      - administrator
     users: {  }
     permissions: {  }
   update_own:
-    roles: {  }
+    roles:
+      - content_editor
+      - administrator
     users: {  }
     permissions: {  }
   delete_own:
-    roles: {  }
+    roles:
+      - content_editor
+      - administrator
     users: {  }
     permissions: {  }
   administer:
-    roles: {  }
+    roles:
+      - content_editor
+      - administrator
     users: {  }
     permissions: {  }
   test:
-    roles: {  }
+    roles:
+      - content_editor
+      - administrator
     users: {  }
     permissions: {  }
   configuration:
-    roles: {  }
+    roles:
+      - administrator
     users: {  }
     permissions: {  }
 handlers:

@@ -5,8 +5,10 @@ dependencies:
   config:
     - core.entity_view_mode.node.product_list_card
     - node.type.product
+    - taxonomy.vocabulary.product_type
   module:
     - node
+    - taxonomy
     - user
 id: product_listing
 label: 'Product listing'
@@ -147,6 +149,84 @@ display:
           plugin_id: bundle
           value:
             product: product
+        field_product_type_target_id:
+          id: field_product_type_target_id
+          table: node__field_product_type
+          field: field_product_type_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_product_type_target_id_op
+            label: 'Product type (field_product_type)'
+            description: ''
+            use_operator: false
+            operator: field_product_type_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_product_type_target_id
+            required: false
+            remember: false
+            multiple: true
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              content_editor: '0'
+              administrator: '0'
+            reduce: false
+          is_grouped: true
+          group_info:
+            label: 'Product type (field_product_type)'
+            description: ''
+            identifier: field_product_type_target_id
+            optional: true
+            widget: radios
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items:
+              1:
+                title: Beanies
+                operator: or
+                value:
+                  1: '1'
+              2:
+                title: Caps
+                operator: or
+                value:
+                  2: '2'
+              3:
+                title: Hoodies
+                operator: or
+                value:
+                  3: '3'
+              4:
+                title: Jackets
+                operator: or
+                value:
+                  4: '4'
+              5:
+                title: Tees
+                operator: or
+                value:
+                  5: '5'
+              6:
+                title: Trousers
+                operator: or
+                value:
+                  6: '6'
+          reduce_duplicates: false
+          vid: product_type
+          type: select
+          hierarchy: true
+          limit: true
+          error_message: true
       style:
         type: default
         options:
@@ -177,6 +257,7 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url
         - url.query_args
         - 'user.node_grants:view'
         - user.permissions
@@ -195,6 +276,7 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url
         - url.query_args
         - 'user.node_grants:view'
         - user.permissions
