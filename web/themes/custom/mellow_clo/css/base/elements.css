@@ -47,3 +47,11 @@ summary::marker {
 [x-cloak] {
   display: none;
 }
+
+.menu {
+  display: none;
+}
+
+.ulb-desktop {
+  display: none;
+}

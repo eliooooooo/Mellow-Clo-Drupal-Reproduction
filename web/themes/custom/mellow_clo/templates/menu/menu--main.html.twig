@@ -32,9 +32,9 @@
   {% import _self as menus %}
   {% if items %}
     {% if menu_level == 0 %}
-      <ul class="flex flex-row flex-wrap items-center justify-center">
+      <ul class="menu flex-row flex-wrap items-center justify-center md:!flex">
     {% else %}
-      <ul class="flex flex-row flex-wrap items-center justify-center">
+      <ul class="menu flex-row flex-wrap items-center justify-center md:!flex">
     {% endif %}
     {% for item in items %}
       <li{{ item.attributes }}>
