@@ -30,6 +30,7 @@ module:
   linkit: 0
   media: 0
   media_library: 0
+  mellow_clo_credentials: 0
   mellow_clo_helper: 0
   menu_link_content: 0
   menu_ui: 0
